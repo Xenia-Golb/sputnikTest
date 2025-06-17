@@ -8,7 +8,13 @@ export type Product = {
   currency: "RUB" | "USD" | "EUR" | string;
   imageUrl: string;
 };
-function CardItem({ imageUrl, title, origin, price, currency }: Product) {
+export function CardItem({
+  imageUrl,
+  title,
+  origin,
+  price,
+  currency,
+}: Product) {
   const formattedPrice = formatPrice(price, currency);
   return (
     <div className={styles.card}>
@@ -23,5 +29,3 @@ function CardItem({ imageUrl, title, origin, price, currency }: Product) {
     </div>
   );
 }
-
-export default CardItem;

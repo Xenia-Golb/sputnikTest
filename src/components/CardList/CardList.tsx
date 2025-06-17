@@ -1,10 +1,10 @@
-import CardItem, { type Product } from "../CardItem/CardItem";
+import { type Product, CardItem } from "../index";
 import styles from "./CardList.module.css";
 
 type CardListProps = {
   products: Product[];
 };
-function CardList({ products }: CardListProps) {
+export function CardList({ products }: CardListProps) {
   return (
     <div className={styles.productList}>
       {products.map((product) => (
